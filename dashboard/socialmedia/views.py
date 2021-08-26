@@ -18,3 +18,9 @@ def twitter(request):
     data = { 'd': posts}
     return render(request, 'twitter.html', data)
 
+def instagram(request):
+    posts = list(db.instagram_metrics.find())
+    print(posts[0])
+    data = { 'd': posts}
+    return render(request, 'instagram.html', data)
+
